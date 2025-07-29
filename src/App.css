@@ -1,0 +1,233 @@
+.todo-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 3%;
+  background-image: linear-gradient(100deg, #001214, #001f29);
+  color: white;
+  transition: 0.3s linear;
+  overflow-x: hidden;
+  overflow-y: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header,
+.form,
+.datetime {
+  margin: 0 1rem;
+  min-height: 10vh;
+  width: 100%;
+  animation: slideIn 0.8s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 3rem;
+  min-height: 25vh;
+  width: 100%;
+}
+
+section h1 {
+  color: #fff;
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.date-time {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.7rem;
+  margin: 15px 0;
+  padding: 0.8rem;
+  width: 100%;
+  animation: slideUp 0.6s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form input,
+form textarea,
+form select {
+  padding: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  background-color: #f2f3f4;
+  color: #1c2833;
+  transition: background-color 200ms ease-in-out;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #1c2833;
+  opacity: 0.7;
+}
+
+form button {
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  background-color: #5dade2;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+form button:hover {
+  background-color: #3498db;
+  transform: scale(1.05);
+}
+
+.filter-sort {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-sort select,
+.clear-btn {
+  padding: 10px;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.clear-btn {
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.clear-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.todo-item {
+  background-color: #f2f3f4;
+  color: #1c2833;
+  border-radius: 15px;
+  padding: 1.6rem;
+  margin: 1rem;
+  max-width: 600px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  flex-wrap: wrap;
+  animation: fadeTask 0.5s ease-in-out;
+}
+
+@keyframes fadeTask {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.todo-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.todo-item p {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.todo-item small {
+  display: block;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.todo-item button {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.todo-item button:hover {
+  transform: scale(1.1);
+}
+
+.check-btn {
+  background-color: #2ecc71;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+}
